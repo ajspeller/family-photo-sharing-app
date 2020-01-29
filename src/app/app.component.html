@@ -1,8 +1,9 @@
-<mat-sidenav-container class="main-container">
+<mat-sidenav-container class="main-container" fxFlexFill>
   <mat-sidenav mode="side" [opened]="navBarOpen">
     <mat-nav-list>
       <a *ngFor="let route of routes" mat-list-item [routerLink]="route.path">
-        <fpa-margin-icon [iconName]="route.icon"></fpa-margin-icon>{{ route.title }}
+        <fpa-margin-icon [iconName]="route.icon"></fpa-margin-icon
+        >{{ route.title }}
       </a>
     </mat-nav-list>
   </mat-sidenav>

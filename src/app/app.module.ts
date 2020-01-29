@@ -2,14 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { SharedModule } from './shared/shared.module';
 import { AlbumsModule } from './albums/albums.module';
-import { MatIconModule } from '@angular/material/icon';
+
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
     SharedModule,
     MatSidenavModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
