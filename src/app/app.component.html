@@ -1,1 +1,9 @@
-<button mat-raised-button color="primary">ajx</button>
+<mat-sidenav-container class="main-container">
+  <mat-sidenav mode="side" [opened]="navBarOpen">This is the sidenav</mat-sidenav>
+  <mat-sidenav-content>
+    <app-toolbar (navToggle)="toggleNav()"></app-toolbar>
+    <div style="margin-left: 10px;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
