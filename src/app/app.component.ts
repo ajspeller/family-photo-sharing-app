@@ -9,6 +9,7 @@ import { map, filter } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnDestroy {
+  mode = 'side';
   navBarOpen = true;
   routes = [
     { path: '/', title: 'Home', icon: 'home' },
@@ -35,14 +36,14 @@ export class AppComponent implements OnDestroy {
 
   loadDashboardContent() {
     console.log('large view');
-    // Do something special since the viewport is currently
-    // using large display sizes
+    this.navBarOpen = true;
+    this.mode = 'side';
   }
 
   loadMobileContent() {
     console.log('small view');
-    // Do something special since the viewport is currently
-    // using mobile display sizes
+    this.navBarOpen = false;
+    this.mode = 'over';
   }
 
   toggleNav() {
