@@ -14,7 +14,7 @@ export class AppComponent implements OnDestroy {
   routes = [
     { path: '/', title: 'Home', icon: 'home' },
     { path: '/albums', title: 'Albums', icon: 'folder' },
-    { path: '/users', title: 'User', icon: 'person' }
+    { path: '/login', title: 'Login', icon: 'vpn_key' }
   ];
   watcher: Subscription;
 
